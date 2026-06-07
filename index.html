@@ -1,353 +1,301 @@
-```html
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Listening Exercise - Finding the Library</title>
+<title>B1 Listening Practice - Favourite Films</title>
 
 <style>
-
 body{
     font-family: Arial, sans-serif;
-    max-width:1000px;
-    margin:auto;
-    padding:20px;
-    background:#f5f7fb;
+    background:#f4f6f9;
+    margin:0;
+    padding:0;
 }
 
-h1{
-    text-align:center;
-    color:#2c3e50;
-}
-
-.card{
-    background:white;
-    padding:25px;
-    border-radius:15px;
-    margin-top:20px;
-    box-shadow:0 3px 10px rgba(0,0,0,.1);
-}
-
-.word-bank{
-    display:flex;
-    gap:10px;
-    flex-wrap:wrap;
-    margin-bottom:25px;
-}
-
-.word{
-    background:#4361ee;
+header{
+    background:#2563eb;
     color:white;
-    padding:10px 15px;
-    border-radius:8px;
-    cursor:grab;
-    font-weight:bold;
+    text-align:center;
+    padding:25px;
+}
+
+.container{
+    max-width:1000px;
+    margin:30px auto;
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 0 12px rgba(0,0,0,0.1);
+}
+
+audio{
+    width:100%;
+    margin:20px 0;
 }
 
 .question{
-    margin:20px 0;
-    font-size:18px;
-    line-height:1.8;
-}
-
-.dropzone{
-    display:inline-block;
-    min-width:120px;
-    min-height:35px;
-    border:2px dashed #4361ee;
+    border:1px solid #ddd;
+    padding:15px;
     border-radius:8px;
-    text-align:center;
-    background:white;
-    vertical-align:middle;
+    margin-bottom:20px;
 }
 
-.correct{
-    background:#06d6a0 !important;
-    color:white;
-    border-color:#06d6a0 !important;
+h2{
+    color:#2563eb;
 }
 
-.wrong{
-    background:#ef233c !important;
-    color:white;
-    border-color:#ef233c !important;
-}
-
-.feedback{
-    color:#ef233c;
-    font-size:14px;
-    margin-top:5px;
+select{
+    padding:8px;
+    margin-left:10px;
 }
 
 button{
-    background:#4361ee;
+    background:#2563eb;
     color:white;
     border:none;
     padding:12px 25px;
     border-radius:8px;
-    font-size:18px;
+    font-size:16px;
     cursor:pointer;
 }
 
 button:hover{
-    opacity:.9;
+    background:#1d4ed8;
 }
 
 #result{
     margin-top:25px;
-    font-size:24px;
-    font-weight:bold;
+    padding:20px;
+    border-radius:8px;
     text-align:center;
-}
-
-.tf-feedback{
-    margin-left:10px;
+    font-size:22px;
     font-weight:bold;
 }
 
+.pass{
+    background:#dcfce7;
+    color:#166534;
+}
+
+.fail{
+    background:#fee2e2;
+    color:#991b1b;
+}
 </style>
 </head>
+
 <body>
 
-<h1>🎧 Finding the Library</h1>
+<p><strong>Instructions:</strong> Listen to the audio carefully and answer all questions.</p>
 
-<audio controls style="width:100%;">
-<source src="0L4-finding-the-library.mp3" type="audio/mpeg">
+<audio controls>
+    <source src="B1_my_favourite_films.mp3" type="audio/mpeg">
 </audio>
 
-<div class="card">
+<h2>Part A: Match the Speaker with the Film</h2>
 
-<h2>Part 1: Drag the Words</h2>
-
-<div class="word-bank">
-
-<div class="word" draggable="true" id="library">library</div>
-<div class="word" draggable="true" id="bridge">bridge</div>
-<div class="word" draggable="true" id="supermarket">supermarket</div>
-<div class="word" draggable="true" id="right">right</div>
-<div class="word" draggable="true" id="park">park</div>
-<div class="word" draggable="true" id="red">red</div>
-
+<div class="question">
+1. The Matrix
+<select id="q1">
+<option value="">Choose</option>
+<option value="A">Speaker A</option>
+<option value="B">Speaker B</option>
+<option value="C">Speaker C</option>
+<option value="D">Speaker D</option>
+<option value="E">Speaker E</option>
+</select>
 </div>
 
 <div class="question">
-1. John is looking for the
-<span class="dropzone" data-answer="library"></span>
+2. Pride and Prejudice
+<select id="q2">
+<option value="">Choose</option>
+<option value="A">Speaker A</option>
+<option value="B">Speaker B</option>
+<option value="C">Speaker C</option>
+<option value="D">Speaker D</option>
+<option value="E">Speaker E</option>
+</select>
 </div>
 
 <div class="question">
-2. John needs to cross the river on a
-<span class="dropzone" data-answer="bridge"></span>
+3. Skyfall
+<select id="q3">
+<option value="">Choose</option>
+<option value="A">Speaker A</option>
+<option value="B">Speaker B</option>
+<option value="C">Speaker C</option>
+<option value="D">Speaker D</option>
+<option value="E">Speaker E</option>
+</select>
 </div>
 
 <div class="question">
-3. John will see a big
-<span class="dropzone" data-answer="supermarket"></span>
-on his left.
+4. Let the Right One In
+<select id="q4">
+<option value="">Choose</option>
+<option value="A">Speaker A</option>
+<option value="B">Speaker B</option>
+<option value="C">Speaker C</option>
+<option value="D">Speaker D</option>
+<option value="E">Speaker E</option>
+</select>
 </div>
 
 <div class="question">
-4. He should turn
-<span class="dropzone" data-answer="right"></span>
-after the supermarket.
+5. The Notebook
+<select id="q5">
+<option value="">Choose</option>
+<option value="A">Speaker A</option>
+<option value="B">Speaker B</option>
+<option value="C">Speaker C</option>
+<option value="D">Speaker D</option>
+<option value="E">Speaker E</option>
+</select>
+</div>
+
+<h2>Part B: Multiple Choice</h2>
+
+<div class="question">
+<h3>6. Why do Allie's parents dislike Noah?</h3>
+<label><input type="radio" name="q6" value="a"> He is too old.</label><br>
+<label><input type="radio" name="q6" value="b"> He is poor.</label><br>
+<label><input type="radio" name="q6" value="c"> He lives far away.</label>
 </div>
 
 <div class="question">
-5. The library is across from the
-<span class="dropzone" data-answer="park"></span>
+<h3>7. Who plays James Bond in Skyfall?</h3>
+<label><input type="radio" name="q7" value="a"> Keanu Reeves</label><br>
+<label><input type="radio" name="q7" value="b"> Ryan Gosling</label><br>
+<label><input type="radio" name="q7" value="c"> Daniel Craig</label>
 </div>
 
 <div class="question">
-6. The library is a big building with a
-<span class="dropzone" data-answer="red"></span>
-roof.
-</div>
-
-</div>
-
-<div class="card">
-
-<h2>Part 2: True or False</h2>
-
-<div class="question">
-1. John knows the town very well.
-<label><input type="radio" name="tf1" value="True"> True</label>
-<label><input type="radio" name="tf1" value="False"> False</label>
-<span id="fb1" class="tf-feedback"></span>
+<h3>8. What does Elizabeth Bennet learn about Mr Darcy?</h3>
+<label><input type="radio" name="q8" value="a"> He is poor.</label><br>
+<label><input type="radio" name="q8" value="b"> He is dishonest.</label><br>
+<label><input type="radio" name="q8" value="c"> She judged him wrongly.</label>
 </div>
 
 <div class="question">
-2. John is visiting the town for only one day.
-<label><input type="radio" name="tf2" value="True"> True</label>
-<label><input type="radio" name="tf2" value="False"> False</label>
-<span id="fb2" class="tf-feedback"></span>
+<h3>9. What is Neo's job during the day?</h3>
+<label><input type="radio" name="q9" value="a"> Police officer</label><br>
+<label><input type="radio" name="q9" value="b"> Computer worker</label><br>
+<label><input type="radio" name="q9" value="c"> Teacher</label>
 </div>
 
 <div class="question">
-3. The library is very far away.
-<label><input type="radio" name="tf3" value="True"> True</label>
-<label><input type="radio" name="tf3" value="False"> False</label>
-<span id="fb3" class="tf-feedback"></span>
+<h3>10. Where is the original version of Let the Right One In from?</h3>
+<label><input type="radio" name="q10" value="a"> Sweden</label><br>
+<label><input type="radio" name="q10" value="b"> America</label><br>
+<label><input type="radio" name="q10" value="c"> Germany</label>
+</div>
+
+<h2>Part C: True or False</h2>
+
+<div class="question">
+<h3>11. Noah writes to Allie every day.</h3>
+<label><input type="radio" name="q11" value="true"> True</label>
+<label><input type="radio" name="q11" value="false"> False</label>
 </div>
 
 <div class="question">
-4. John must cross a river to get to the library.
-<label><input type="radio" name="tf4" value="True"> True</label>
-<label><input type="radio" name="tf4" value="False"> False</label>
-<span id="fb4" class="tf-feedback"></span>
+<h3>12. Skyfall focuses only on action scenes.</h3>
+<label><input type="radio" name="q12" value="true"> True</label>
+<label><input type="radio" name="q12" value="false"> False</label>
 </div>
 
 <div class="question">
-5. John should turn left after the supermarket.
-<label><input type="radio" name="tf5" value="True"> True</label>
-<label><input type="radio" name="tf5" value="False"> False</label>
-<span id="fb5" class="tf-feedback"></span>
+<h3>13. Pride and Prejudice is based on a book by Jane Austen.</h3>
+<label><input type="radio" name="q13" value="true"> True</label>
+<label><input type="radio" name="q13" value="false"> False</label>
 </div>
 
 <div class="question">
-6. The library is next to the park.
-<label><input type="radio" name="tf6" value="True"> True</label>
-<label><input type="radio" name="tf6" value="False"> False</label>
-<span id="fb6" class="tf-feedback"></span>
+<h3>14. Neo discovers that machines control the world.</h3>
+<label><input type="radio" name="q14" value="true"> True</label>
+<label><input type="radio" name="q14" value="false"> False</label>
 </div>
 
 <div class="question">
-7. The library has a red roof.
-<label><input type="radio" name="tf7" value="True"> True</label>
-<label><input type="radio" name="tf7" value="False"> False</label>
-<span id="fb7" class="tf-feedback"></span>
+<h3>15. Let the Right One In is a comedy film.</h3>
+<label><input type="radio" name="q15" value="true"> True</label>
+<label><input type="radio" name="q15" value="false"> False</label>
 </div>
 
-</div>
-
-<div style="text-align:center;margin-top:20px;">
-<button onclick="checkAnswers()">Check Answers</button>
-<button onclick="location.reload()">Try Again</button>
-</div>
+<button onclick="checkAnswers()">Submit Answers</button>
 
 <div id="result"></div>
 
+</div>
+
 <script>
-
-const draggables=document.querySelectorAll('.word');
-const dropzones=document.querySelectorAll('.dropzone');
-
-draggables.forEach(item=>{
-
-item.addEventListener('dragstart',e=>{
-e.dataTransfer.setData('text',item.id);
-});
-
-});
-
-dropzones.forEach(zone=>{
-
-zone.addEventListener('dragover',e=>{
-e.preventDefault();
-});
-
-zone.addEventListener('drop',e=>{
-
-e.preventDefault();
-
-const id=e.dataTransfer.getData('text');
-
-zone.innerHTML=id;
-zone.dataset.user=id;
-
-});
-
-});
 
 function checkAnswers(){
 
-let score=0;
+let score = 0;
 
-// Fill blanks
-
-dropzones.forEach(zone=>{
-
-if(zone.dataset.user===zone.dataset.answer){
-
-zone.classList.add("correct");
-score++;
-
-}else{
-
-zone.classList.add("wrong");
-
-zone.innerHTML=
-(zone.dataset.user || "blank")
-+"<br><small>✓ "
-+zone.dataset.answer+
-"</small>";
-
-}
-
-});
-
-// True False
-
-const answers={
-tf1:"False",
-tf2:"True",
-tf3:"False",
-tf4:"True",
-tf5:"False",
-tf6:"False",
-tf7:"True"
+const matchingAnswers = {
+q1:"D",
+q2:"C",
+q3:"B",
+q4:"E",
+q5:"A"
 };
 
-for(let key in answers){
-
-const selected=document.querySelector(
-`input[name="${key}"]:checked`
-);
-
-const feedback=document.getElementById(
-"fb"+key.replace("tf","")
-);
-
-if(selected){
-
-if(selected.value===answers[key]){
-
-feedback.innerHTML="✓";
-feedback.style.color="green";
+for(let q in matchingAnswers){
+if(document.getElementById(q).value === matchingAnswers[q]){
 score++;
-
-}else{
-
-feedback.innerHTML=
-"Correct: "+answers[key];
-feedback.style.color="red";
-
+}
 }
 
-}else{
+const answers = {
+q6:"b",
+q7:"c",
+q8:"c",
+q9:"b",
+q10:"a",
+q11:"true",
+q12:"false",
+q13:"true",
+q14:"true",
+q15:"false"
+};
 
-feedback.innerHTML=
-"Correct: "+answers[key];
-feedback.style.color="red";
+for(let q in answers){
 
+let selected =
+document.querySelector(`input[name="${q}"]:checked`);
+
+if(selected && selected.value === answers[q]){
+score++;
+}
 }
 
+let percentage = Math.round((score/15)*100);
+
+let feedback = "";
+
+if(percentage >= 80){
+feedback = "Excellent! You have strong listening skills.";
+}
+else if(percentage >= 60){
+feedback = "Good Job! Keep practising.";
+}
+else{
+feedback = "Needs More Practice. Try listening again.";
 }
 
-let percent=Math.round((score/13)*100);
+const result = document.getElementById("result");
 
-document.getElementById("result").innerHTML=
-`
-Score: ${score}/13
-<br>
-Percentage: ${percent}%
-`;
+result.innerHTML =
+`Score: ${score}/15 (${percentage}%)<br><br>${feedback}`;
 
+result.className = percentage >= 60 ? "pass" : "fail";
 }
 
 </script>
 
 </body>
 </html>
-```
